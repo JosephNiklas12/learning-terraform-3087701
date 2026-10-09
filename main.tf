@@ -1,5 +1,6 @@
 data "aws_ami" "app_ami" {
   most_recent = true
+  include_deprecated = true
 
   filter {
     name   = "name"
