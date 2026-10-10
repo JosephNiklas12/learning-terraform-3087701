@@ -82,7 +82,7 @@ module "blog_alb" {
   }
 }
 
-resource "aws_lb_target_group" "test" {
+resource "aws_lb_target_group" "blog" {
   name     = "blog"
   port     = 80
   protocol = "HTTP"
