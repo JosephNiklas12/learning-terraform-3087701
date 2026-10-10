@@ -75,6 +75,7 @@ module "blog_alb" {
         target_group_arn = aws_lb_target_group.blog.arn
       }
     }
+  }
    
   tags = {
     Environment = "dev"
