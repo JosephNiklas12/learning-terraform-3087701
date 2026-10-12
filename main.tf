@@ -97,3 +97,14 @@ resource "aws_lb_target_group_attachment" "blog" {
   target_id        = aws_instance.blog.id
   port             = 80
 }
+
+
+module "bucket_dev" {
+    source      = "./modules/secure-bucket"
+    bucket_name = "josephcrawford-tf-module-dev-20261011"
+}
+
+module "bucket_prod" {
+     source     = "./modules/secure-bucket"
+    bucket_name = "josephcrawford-tf-module-prod-20261011"
+}
